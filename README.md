@@ -11,40 +11,69 @@ This is a Spring Boot-based authentication system developed for the Woro-media a
 
 # Table of Contents
 * Features
-Technologies Used
-Project Structure
-How to Run
-Usage
-Testing
-Database Configuration
-Contact
+* Technologies Used
+* Project Structure
+* How to Run
+* Usage
+* Testing
+* Database Configuration
+* Contact
 
 # Features
-User registration with username, email, and password
-User login with username or email and password
-Role-based access control with "ROLE_USER" and "ROLE_ADMIN" roles
-Admin panel accessible only to users with "ROLE_ADMIN" role
-Token-based authentication using JSON Web Tokens (JWT)
-Logout functionality
+* User registration with username, email, and password
+* User login with username or email and password
+* Role-based access control with "ROLE_USER" and "ROLE_ADMIN" roles
+* Admin panel accessible only to users with "ROLE_ADMIN" role
+* Token-based authentication using JSON Web Tokens (JWT)
+* Logout functionality
 
 # Technologies Used
-Java 8
-Spring Boot
-Spring Security
-Spring Data JPA
-JWT (JSON Web Tokens)
-MySQL
-Maven
-JUnit and Mockito for testing
+* Java 8
+* Spring Boot
+* Spring Security
+* Spring Data JPA
+* JWT (JSON Web Tokens)
+* MySQL
+* Maven
+* JUnit and Mockito for testing
+
 # Project Structure
-The project follows the standard Spring Boot project structure with separate packages for controllers, services, repositories, entities, payloads, and security configuration.
 
-# The main packages are:
+* The project follows the standard Spring Boot project structure with separate packages for
+* controllers,
+* services,
+*  repositories,
+*   entities,
+*   payloads, and
+*    utils,
+*    security configuration.
 
-com.woromedia.auth.api.controller: Contains the REST API controllers.
-com.woromedia.auth.api.entity: Contains JPA entity classes.
-com.woromedia.auth.api.payload: Contains payload classes for request and response.
-com.woromedia.auth.api.repository: Contains JPA repositories.
-com.woromedia.auth.api.security: Contains security-related classes like JWT token provider, custom user details service, and authentication filter.
-com.woromedia.auth.api.service: Contains service interfaces and their implementations.
-com.woromedia.auth.api.utils: Contains utility classes.
+ # The main packages are:
+* com.woromedia.auth.api.controller: Contains the REST API controllers.
+* com.woromedia.auth.api.entity: Contains JPA entity classes.
+* com.woromedia.auth.api.payload: Contains payload classes for request and response.
+* com.woromedia.auth.api.repository: Contains JPA repositories.
+* com.woromedia.auth.api.security: Contains security-related classes like JWT token provider,
+   custom user details service, and authentication filter.
+* com.woromedia.auth.api.service: Contains service interfaces and their implementations.
+* com.woromedia.auth.api.utils: Contains utility classes.
+
+# Dependencies
+
+The project uses the following dependencies:
+
+* Spring Boot Starter Web: This dependency enables the development of web applications using Spring Boot. It provides essential components for building RESTful APIs.
+
+* Spring Boot Starter Data JPA: This dependency enables JPA (Java Persistence API) support in the application. It simplifies the interaction with the database.
+
+* Spring Boot Starter Security: This dependency provides security support for Spring Boot applications. It allows you to secure your API endpoints and handle authentication and authorization.
+
+* Spring Boot Starter Validation: This dependency enables validation support for the request payloads. It allows you to enforce constraints on the incoming request data.
+
+* JUnit: This dependency is used for writing unit tests.
+
+* Mockito: This dependency is used for mocking objects in unit tests.
+
+* JWT (JSON Web Tokens): This dependency provides support for generating and validating JSON Web Tokens for token-based authentication.
+
+* MySQL Connector/J: This dependency provides the MySQL JDBC driver to connect the application with the MySQL database.
