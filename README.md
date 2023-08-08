@@ -5,10 +5,7 @@
 ![authentication_system users](https://github.com/SDEParag/Java-backend-Spring-boot-MySQL-login-logout-Authentication-System/assets/137553676/a8424f77-9bbd-4ab7-9dc1-ca586708622d)
 
 # Java-backend-Spring-boot-MySQL-login-logout-Authentication-System
-*Java Backend Spring Boot Authentication System is a robust authentication system built using Spring Boot. It encompasses user registration, login, role-based access control, and logout functionalities, ensuring secure user interactions with the application. Using Spring Security, JWT, MySQL, and authenticate users with the login and logout  functionalities.
-
-* This is a Spring Boot-based authentication system. It provides user registration, login, role-based access control, and logout functionalities.
-
+* Java Backend Spring Boot Authentication System is a comprehensive and secure authentication solution developed using the Spring Boot framework. This system integrates various essential components, including Spring Security, JWT (JSON Web Tokens), and MySQL, to establish a robust user authentication experience. It offers features such as user registration, login, role-based access control, and secure logout functionality.
 
 # Table of Contents
 * Features
