@@ -94,10 +94,11 @@ Follow the steps below to run the application:
 
 * This is my application.properties 
 * #Database Configuration
-spring.datasource.url=jdbc:mysql://localhost:3306/authentication_system  <-------Add your database name only
+spring.datasource.url=jdbc:mysql://localhost:3306/authentication_system  <---Add your database name only
 
-spring.datasource.username=****          <-------Add your database username
-spring.datasource.password=****          <-------Add your database password
+spring.datasource.username=****    <--Add your database username
+
+spring.datasource.password=****    <--Add your database password
 
 * #Enable SQL query logging
 spring.jpa.show-sql=true
