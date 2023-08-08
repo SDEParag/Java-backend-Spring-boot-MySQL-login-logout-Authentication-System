@@ -6,3 +6,45 @@
 
 # Java-backend-Spring-boot-MySQL-login-logout-Authentication-System
 | Java backend |  Simple authentication  system using Spring Security, JWT, MySQL, and authenticate users with the login and logout  functionalities.
+
+This is a Spring Boot-based authentication system developed for the Woro-media assignment. It provides user registration, login, role-based access control, and logout functionalities.
+
+# Table of Contents
+* Features
+Technologies Used
+Project Structure
+How to Run
+Usage
+Testing
+Database Configuration
+Contact
+
+# Features
+User registration with username, email, and password
+User login with username or email and password
+Role-based access control with "ROLE_USER" and "ROLE_ADMIN" roles
+Admin panel accessible only to users with "ROLE_ADMIN" role
+Token-based authentication using JSON Web Tokens (JWT)
+Logout functionality
+
+# Technologies Used
+Java 8
+Spring Boot
+Spring Security
+Spring Data JPA
+JWT (JSON Web Tokens)
+MySQL
+Maven
+JUnit and Mockito for testing
+# Project Structure
+The project follows the standard Spring Boot project structure with separate packages for controllers, services, repositories, entities, payloads, and security configuration.
+
+# The main packages are:
+
+com.woromedia.auth.api.controller: Contains the REST API controllers.
+com.woromedia.auth.api.entity: Contains JPA entity classes.
+com.woromedia.auth.api.payload: Contains payload classes for request and response.
+com.woromedia.auth.api.repository: Contains JPA repositories.
+com.woromedia.auth.api.security: Contains security-related classes like JWT token provider, custom user details service, and authentication filter.
+com.woromedia.auth.api.service: Contains service interfaces and their implementations.
+com.woromedia.auth.api.utils: Contains utility classes.
