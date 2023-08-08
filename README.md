@@ -180,7 +180,8 @@ Click on Send
 * User Logout Endpoint:
 
 URL:
-* Method POST /api/auth/logout
+* Method POST : http://localhost:8080/api/auth/logout
+* Click on Send 
 * Response: HTTP 200 OK with "Logged out successfully" message
 
 # Handling Bad Credentials
