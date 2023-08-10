@@ -1,9 +1,3 @@
-![authentication_system roles](https://github.com/SDEParag/Java-backend-Spring-boot-MySQL-login-logout-Authentication-System/assets/137553676/a6e4647f-3106-47b4-a118-2682dfb565b7)
-
-![authentication_system user_roles](https://github.com/SDEParag/Java-backend-Spring-boot-MySQL-login-logout-Authentication-System/assets/137553676/ec1e89ff-ac89-4ed3-8954-fa7a0d1a1e6a)
-
-![authentication_system users](https://github.com/SDEParag/Java-backend-Spring-boot-MySQL-login-logout-Authentication-System/assets/137553676/a8424f77-9bbd-4ab7-9dc1-ca586708622d)
-
 # Java-backend-Spring-boot-MySQL-login-logout-Authentication-System
 * Java Backend Spring Boot Authentication System is a comprehensive and secure authentication solution developed using the Spring Boot framework. This system integrates various essential components, including Spring Security, JWT (JSON Web Tokens), and MySQL, to establish a robust user authentication experience. It offers features such as user registration, login, role-based access control, and secure logout functionality.
 
@@ -136,9 +130,16 @@ Request Body:
  }
 click on ---> Send  
 * Response: HTTP 200 OK with "User registered successfully" message.
+* 
+![User_register](https://github.com/SDEParag/Java-backend-Spring-boot-MySQL-login-logout-Authentication-System/assets/137553676/9f503ac4-834d-409e-ad7c-01bcd9c40558)
 
 * Bad Credentials: If the provided username or email is already taken, 
 the endpoint returns HTTP 400 Bad Request with an appropriate error message.
+
+
+![User_already](https://github.com/SDEParag/Java-backend-Spring-boot-MySQL-login-logout-Authentication-System/assets/137553676/0f9feb76-23f0-49a8-b731-46c75834ed67)
+
+
 
 * 2 User Login Endpoint:
 URL:
@@ -153,29 +154,40 @@ Request Body:
 
 * Response: HTTP 200 OK with a JWT token in the response body.
 
+![login](https://github.com/SDEParag/Java-backend-Spring-boot-MySQL-login-logout-Authentication-System/assets/137553676/c17d8308-a24b-4d27-af94-39571bd7d8df)
+
 * JWT token (On successful login):
     {
-    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJqb2huX2RvZSIsInJvbGUiOiJST0x
-  FX1VTRVIiLCJpYXQiOjE2MjgxOTQ1OTUsImV4cCI6MTYyODE5ODM5NX0.kiZb0N6dO03t
-       9pPmFgWkGTr5F76vE7w_z-ZrkaCLy2c"
+       "token": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ3b3JvbWVkaWFfMUBleGFtcGxlLmNvb
+         SIsImlhdCI6MTY5MTcwOTA0NywiZXhwIjoxNjkyMzEzODQ3fQ.d4GRTnppSYzlONRFleCqRbRgi7WsJe_fxv6Ui
+           EOpfl9h5sr5FG5D3EQ9IdkKGNxZVKnNbKTU-hZi_bPtRMtafg",
+         "tokenType": "Bearer"
+    }
      }
   
 * Bad Credentials: If the provided username or email and password combination is invalid, the endpoint returns HTTP 401 Unauthorized with an error message.
+
+![wrong input password or username](https://github.com/SDEParag/Java-backend-Spring-boot-MySQL-login-logout-Authentication-System/assets/137553676/139656f1-a667-4ad8-8817-49c04fbe48ae)
 
 * 3 Admin Panel Endpoint:
 
 URL:
 * Method GET : http://localhost:8080/api/auth/admin
+  
    * Select --> Authorization --> Bearer token --> copy login token  paste in Token like below,
-  Token: [ eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJqb2huX2RvZSIsInJvbGUiOiJST0x
-FX1VTRVIiLCJpYXQiOjE2MjgxOTQ1OTUsImV4cCI6MTYyODE5ODM5NX0.kiZb0N6dO03t9pPmFgWkGTr5F76vE7w_z-ZrkaCLy2c ]
+  Token:  [ eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ3b3JvbWVkaWFfMUBleGFtcGxlLmNvb
+ SIsImlhdCI6MTY5MTcwOTA0NywiZXhwIjoxNjkyMzEzODQ3fQ.d4GRTnppSYzlONRFleCqRbRgi7WsJe_fxv6Ui
+EOpfl9h5sr5FG5D3EQ9IdkKGNxZVKnNbKTU-hZi_bPtRMtafg ]
 
 Click on Send
 * Response: HTTP 200 OK with "Admin Panel" message.
-  
+
+![Admin](https://github.com/SDEParag/Java-backend-Spring-boot-MySQL-login-logout-Authentication-System/assets/137553676/0478778a-7aa7-4764-8553-7e0407ec3a2d)
+ 
 * Authorization Error: If a user without the "ROLE_ADMIN" role tries to access
  this endpoint, the application returns HTTP 403 Forbidden with an error message.
 
+![wrong input jwt  token](https://github.com/SDEParag/Java-backend-Spring-boot-MySQL-login-logout-Authentication-System/assets/137553676/125a8442-8b90-4119-a480-14fd02263f9f)
 
 * User Logout Endpoint:
 
@@ -183,6 +195,17 @@ URL:
 * Method POST : http://localhost:8080/api/auth/logout
 * Click on Send 
 * Response: HTTP 200 OK with "Logged out successfully" message
+
+![logout](https://github.com/SDEParag/Java-backend-Spring-boot-MySQL-login-logout-Authentication-System/assets/137553676/a4f51992-80b1-4c83-bce4-a4e83642e79b)
+
+# Easily Collect User Registration Data with Postman, Keep it Safe in a MySQL Database, and Improve the User Signup Process.
+
+![authentication_system roles](https://github.com/SDEParag/Java-backend-Spring-boot-MySQL-login-logout-Authentication-System/assets/137553676/a6e4647f-3106-47b4-a118-2682dfb565b7)
+
+![authentication_system user_roles](https://github.com/SDEParag/Java-backend-Spring-boot-MySQL-login-logout-Authentication-System/assets/137553676/ec1e89ff-ac89-4ed3-8954-fa7a0d1a1e6a)
+
+![authentication_system users](https://github.com/SDEParag/Java-backend-Spring-boot-MySQL-login-logout-Authentication-System/assets/137553676/a8424f77-9bbd-4ab7-9dc1-ca586708622d)
+
 
 # Handling Bad Credentials
 * If the provided username or email during registration is already taken, the application returns HTTP 400 Bad Request with an appropriate error message.
