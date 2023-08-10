@@ -198,7 +198,7 @@ URL:
 
 ![logout](https://github.com/SDEParag/Java-backend-Spring-boot-MySQL-login-logout-Authentication-System/assets/137553676/a4f51992-80b1-4c83-bce4-a4e83642e79b)
 
-# Easily Collect User Registration Data with Postman, Keep it Safe in a MySQL Database, and Improve the User Signup Process.
+* Easily Collect User Registration Data with Postman, Keep it Safe in a MySQL Database, and Improve the User Signup Process.
 
 ![authentication_system roles](https://github.com/SDEParag/Java-backend-Spring-boot-MySQL-login-logout-Authentication-System/assets/137553676/a6e4647f-3106-47b4-a118-2682dfb565b7)
 
