@@ -86,7 +86,8 @@ Follow the steps below to run the application:
   * (my mysql database is authentication_system , so create only database with any name as per your requirement)
 * Run the application using Intellij IDE.
 
-* This is my application.properties 
+* This is my application.properties
+```http
 * #Database Configuration
 * spring.datasource.url=jdbc:mysql://localhost:3306/authentication_system  <---Add your database name only
 
@@ -107,7 +108,7 @@ spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.MySQL8Dialect
 app.jwt-secret=JWTSecretKey
 app.jwt-expiration-milliseconds=604800000
 
-
+```
 
 
 # Usage
@@ -121,16 +122,17 @@ You can interact with the API endpoints using Postman or any other API testing t
 * Method POST: http://localhost:8080/api/auth/register
      Select --> Body --> raw --> JSON
 Request Body:
-
+```http
 *  JSON Structure
  {
 "username": "woromedia_1",
 "password": "password123",
 "email": "woromedia_1@example.com"
  }
+```
 click on ---> Send  
 * Response: HTTP 200 OK with "User registered successfully" message.
-* 
+
 ![User_register](https://github.com/SDEParag/Java-backend-Spring-boot-MySQL-login-logout-Authentication-System/assets/137553676/9f503ac4-834d-409e-ad7c-01bcd9c40558)
 
 * Bad Credentials: If the provided username or email is already taken, 
@@ -142,42 +144,47 @@ the endpoint returns HTTP 400 Bad Request with an appropriate error message.
 
 
 * 2 User Login Endpoint:
+
 URL:
 * Method POST: http://localhost:8080/api/auth/login
      Select --> Body --> raw --> JSON
 Request Body:
+```http
 *  JSON Structure
 {
   "usernameOrEmail": "woromediaintern_1",
   "password": "password123"
 }
-
+```
 * Response: HTTP 200 OK with a JWT token in the response body.
 
 ![login](https://github.com/SDEParag/Java-backend-Spring-boot-MySQL-login-logout-Authentication-System/assets/137553676/c17d8308-a24b-4d27-af94-39571bd7d8df)
 
 * JWT token (On successful login):
+```http
     {
        "token": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ3b3JvbWVkaWFfMUBleGFtcGxlLmNvb
          SIsImlhdCI6MTY5MTcwOTA0NywiZXhwIjoxNjkyMzEzODQ3fQ.d4GRTnppSYzlONRFleCqRbRgi7WsJe_fxv6Ui
            EOpfl9h5sr5FG5D3EQ9IdkKGNxZVKnNbKTU-hZi_bPtRMtafg",
          "tokenType": "Bearer"
     }
-     }
-  
+  ```
 * Bad Credentials: If the provided username or email and password combination is invalid, the endpoint returns HTTP 401 Unauthorized with an error message.
 
 ![wrong input password or username](https://github.com/SDEParag/Java-backend-Spring-boot-MySQL-login-logout-Authentication-System/assets/137553676/139656f1-a667-4ad8-8817-49c04fbe48ae)
 
-* 3 Admin Panel Endpoint:
 
+* 3 Admin Panel Endpoint:
+```http
 URL:
 * Method GET : http://localhost:8080/api/auth/admin
   
    * Select --> Authorization --> Bearer token --> copy login token  paste in Token like below,
-  Token:  [ eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ3b3JvbWVkaWFfMUBleGFtcGxlLmNvb
- SIsImlhdCI6MTY5MTcwOTA0NywiZXhwIjoxNjkyMzEzODQ3fQ.d4GRTnppSYzlONRFleCqRbRgi7WsJe_fxv6Ui
-EOpfl9h5sr5FG5D3EQ9IdkKGNxZVKnNbKTU-hZi_bPtRMtafg ]
+ 
+Token:
+[eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ3b3JvbWVkaWFfMUBleGFtcGxlLmNvbSIsImlhdCI6MTY5MTcwOTA0NywiZXhwI
+joxNjkyMzEzODQ3fQ.d4GRTnppSYzlONRFleCqRbRgi7WsJe_fxv6UiEOpfl9h5sr5FG5D3EQ9IdkKGNxZVKnNbKTU-hZi_bPtRMtafg] 
+```
 
 Click on Send
 * Response: HTTP 200 OK with "Admin Panel" message.
